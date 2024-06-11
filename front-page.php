@@ -4,7 +4,7 @@ get_header();
 	<div class="hero-inner">
 		<span>Welcome to the</span>
 		<h1>National Concert Venue</h1>
-		<h2>New York City</h2>
+		<h2>New York eeeeeeeeeeeeeeeCity</h2>
 	</div>
 
 </div>
