@@ -1,7 +1,7 @@
 <footer id="footer" role="contentinfo">
 	<div class="footer-inner">
 		<div class="logos">
-			<img src="wp-content/themes/boomerang-instawp/assets/images/boomerang.svg">
+			<img src="/wp-content/themes/boomerang-instawp/assets/images/boomerang.svg">
 		</div>
 		<div class="product">
 			<h2>Product</h2>
@@ -16,7 +16,7 @@
 		<div class="offer">
 			<h2>Thanks for trying our demo!</h2>
 			<p>Now how about 20% off?</p>
-			<p>You should receive a discount code when you began this demo, but if not, just head <a href="">here</a> to join our mailing list.</p>
+			<p>All you have to do is join our mailing list <a href="https://boomerangwp.com/subscribe">here</a>. Welcome on board!</p>
 		</div>
 	</div>
 <div id="copyright">
