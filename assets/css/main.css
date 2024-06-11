@@ -1,0 +1,241 @@
+/**
+Variables and Mixins
+ */
+/* Fonts */
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway-latin-400-normal.woff2") format("woff2"), url("../fonts/raleway-latin-400-normal.woff") format("woff");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway-latin-400-italic.woff2") format("woff2"), url("../fonts/raleway-latin-400-italic.woff") format("woff");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway-latin-700-normal.woff2") format("woff2"), url("../fonts/raleway-latin-700-normal.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway-latin-700-italic.woff2") format("woff2"), url("../fonts/raleway-latin-700-italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Material Symbols Outlined";
+  src: url("../fonts/MaterialSymbolsOutlined.woff2") format("woff2");
+  font-style: normal;
+}
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+/**
+General
+ */
+html {
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  font-size: 18px;
+}
+
+/* Style the header */
+header {
+  position: fixed;
+  padding: 10px 16px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header #branding img {
+  width: 250px;
+}
+header nav {
+  display: flex;
+}
+header nav ul {
+  display: flex;
+  gap: 10px;
+}
+header nav ul li {
+  padding: 0 23px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  line-height: 23px;
+  box-sizing: border-box;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  padding: 60px;
+  background: #000;
+  color: #fff;
+}
+footer .footer-inner {
+  margin-bottom: 60px;
+  display: flex;
+  gap: 40px;
+  letter-spacing: 0.3em;
+  line-height: 23px;
+}
+footer .footer-inner .logos {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+footer .footer-inner .logos img {
+  width: 400px;
+}
+footer .footer-inner .product {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+footer .footer-inner .product h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+footer .footer-inner .product ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer-inner .product ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  line-height: 23px;
+  box-sizing: border-box;
+}
+footer .footer-inner .product ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer-inner .offer {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 23px;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  line-height: 23px;
+  box-sizing: border-box;
+}
+footer .footer-inner .offer h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+footer .footer-inner .offer p {
+  margin-bottom: 10px;
+}
+footer .footer-inner .offer p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/**
+Homepage
+ */
+.home #hero {
+  background-image: url("/wp-content/themes/boomerang-instawp/assets/images/concert.jpg");
+  height: 1000px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.home #hero .hero-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 40px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.home #hero .hero-inner h1 {
+  font-size: 48px;
+}
+.home #hero .hero-inner h2 {
+  font-size: 36px;
+}
+.home .feedback, .home .blurb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 800px;
+  max-width: 90%;
+  padding: 60px 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+.home .feedback h2, .home .blurb h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.home .feedback p, .home .blurb p {
+  font-size: 20px;
+  line-height: 150%;
+}
+.home .shows {
+  background-image: url("/wp-content/themes/boomerang-instawp/assets/images/dude.jpg");
+  height: 783px;
+  width: 1200px;
+  margin: 60px auto;
+  position: relative;
+}
+.home .shows .shows-inner {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  padding: 40px;
+  background: #fff;
+  border: 1px solid #000;
+  box-shadow: -10px -10px 5px 0px #3b3b3b;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  justify-content: space-evenly;
+}
+.home .shows .shows-inner h2 {
+  font-size: 56px;
+  font-weight: bold;
+}
+.home .shows .shows-inner p {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=main.css.map */
