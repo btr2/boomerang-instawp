@@ -161,3 +161,60 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+function biw_page_top( $id ) {
+	$post = get_post();
+	?>
+	<?php if ( has_shortcode( $post->post_content, 'boomerang') || has_block( 'boomerang-block/shortcode-gutenberg' ) ) : ?>
+<div class="infobox">
+	<p>This is a Boomerang Board. It's where your Boomerangs live. You can have as many of these as you need, so whether you sell multiple products, have multiple branches, or even have different feedback campaigns though out the year, we've got you covered.</p>
+	<p>Try playing with the filters to manage which Boomerangs you see.</p>
+	<p>Try adding a new Boomerang.</p>
+	<p>Then, when you are ready, click on the title of the pre-built Boomerangs to get to it's dedicated page. Each one demonstrates a particular Boomerang feature.</p>
+</div>
+	<?php endif; ?>
+<?php
+}
+add_action( 'biw_page_top', 'biw_page_top');
+
+function biw_single_boomerang_top( $id ) {
+	?>
+		<?php if ( 32 === $id ) : ?>
+		<div class="infobox">
+			<p>This Boomerang has been linked to an Ignitiondeck Crowdfunding product. You can see how the crowdfund is progressing under the main content. Your users can even support the crowdfund right here - click the 'Support Now' button and donate $50 in the popup that appears. You'll then be taken to an Ignitiondeck page to complete the payment (don't worry - you won't actually be billed).</p>
+			<p>Boomerang also supports WP Crowdfunding, so you can choose which crowdfunding solution you wish to use.</p>
+		</div>
+		<?php elseif ( 30 === $id ) : ?>
+		<div class="infobox">
+			<p>Sometimes, you receive feedback that isn't about the future of your product or service, but is actually something that just needs to get fixed. For software developers, it may be an error in the code. For authors or journalists, it may be a typo. For physical organisations, such as shops, airports or (you guessed it) concert venues, it may be that something just, broke.</p>
+			<p>In Boomerang-speak, we call this a 'bug'. Bugs don't need to be public. They don't need to generate discussion, or analysed any further. Boomerang's 'mark as bug' feature hides the Boomerang from display, and marks it accordingly, so you can take any action required.</p>
+			<p>To toggle bug status, click the bug icon in the Admin Actions area.</p>
+		</div>
+	<?php elseif ( 29 === $id ) : ?>
+		<div class="infobox">
+			<p>Positive feedback is great too! Boomerang allows administrators to create private notes to record further information, communicate with other administrators, give instructions and so on. In this Boomerang, the private note system is being used to feed back to the heroic staff member's manager. To create a private note, just toggle the switch in the comment box. You can change the color of the private note system in your Board's settings.</p>
+			<p>We are exploring ways of streamlining this process further. What should happen when a private note is created? Should the note trigger an automation with another plugin or tool? If you have an idea, please let us know on our very own (Boomerang powered) <a target="_blank" href="https://boomerangwp.com/feature-requests">feature request board</a>.</p>
+		</div>
+	<?php elseif ( 27 === $id ) : ?>
+		<div class="infobox">
+			<p>People aren't happy with the climate system at the Nashdale Concert Venue. To prevent Boomerangs focussed on the same issue clogging up the Boomerang archive, you can choose to merge related Boomerangs. This Boomerang has been chosen as the primary Boomerang, and has seen other Boomerangs merged into it. You can view these Boomerangs in the list in the Admin Area. This feature helps to keep all related content in one place, saving administrators from having to duplicate comments or replies, and thus wasting time.</p>
+		</div>
+	<?php elseif ( 48 === $id ) : ?>
+		<div class="infobox">
+			<p>Occasionally, you receive feedback that you can't do much with, or is abusive, offensive or discriminatory in nature. You may decide that such feedback is not appropriate. Boomerang comes with two methods of dealing with non-constructive feedback. There is an option to turn pre-approval on, which would mean that a Boomerang such as this would never get approved. However, that can be labour intensive if you have many Boomerangs coming in simultaneously.</p>
+			<p>Another method is to lock the Boomerang, making it private. This means that only administrators will be able to see it. You do this from inside the admin area, by clicking visibility, then 'Make Private'.</p>
+		</div>
+	<?php elseif ( 33 === $id ) : ?>
+		<div class="infobox">
+			<p>This Boomerang has been merged into another related Boomerang, as it relates to a faulty climate system that has come up before. To merge a Boomerang into another, click on the 'merge' symbol in the Admin Actions area. It will hide the Boomerang from public view, and push it's comments over to the primary Boomerang.</p>
+		</div>
+	<?php elseif ( 26 === $id ) : ?>
+		<div class="infobox">
+			<p>You might have been wondering why the Boomerang form has a field asking for the date of the visit. Boomerang is integrated with Advanced Custom Fields, to give you the full range of possibilities to customise your form for your particular circumstances. This Boomerang user has added the date he came to the concert venue, which will make it easier to track whatever his feedback relates to.</p>
+			<p>Unlike other tools that only give you the usual custom fields (text, dropdown, radio buttons etc) you can use anything ACF has to offer. For instance, you could be a local council using Boomerang to collect information from residents such as potholes, damaged bus shelters or fallen trees. Using ACF's map field, a Boomerang can have an address attached to it, giving your council the exact location of the reported issue. The possibilities are endless.</p>
+		</div>
+	<?php endif; ?>
+
+	<?php
+}
+add_action( 'biw_single_boomerang_top', 'biw_single_boomerang_top');

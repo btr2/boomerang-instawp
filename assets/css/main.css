@@ -56,6 +56,46 @@ html strong {
   font-weight: bold;
 }
 
+/**
+Infobox - information for demo users
+ */
+.infobox {
+  background-color: #fafafa;
+  max-width: 1200px;
+  width: 90%;
+  padding: 40px;
+  margin: 40px auto 0px;
+  border: 1px solid #e7ebed;
+  position: relative;
+}
+.infobox p {
+  margin-bottom: 20px;
+  line-height: 150%;
+  text-wrap: pretty;
+}
+.infobox p:last-of-type {
+  margin: 0;
+}
+.infobox p a {
+  font-weight: bold;
+}
+.infobox p a:hover {
+  opacity: 0.7;
+}
+.infobox:after {
+  position: absolute;
+  content: "";
+  background-image: url("/wp-content/themes/boomerang-instawp/assets/images/powered-by-300px.png");
+  height: 22.5px;
+  width: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 0;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  bottom: 0;
+}
+
 /* Style the header */
 header#header {
   padding: 10px 16px;
@@ -249,7 +289,7 @@ footer#footer .footer-inner .offer p a {
   padding-bottom: 40px;
 }
 #hero .hero-inner {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.7);
   background-blend-mode: darken;
   width: 90%;
   margin: 40px auto;
@@ -322,6 +362,9 @@ Homepage
 .home #hero {
   background-image: url("/wp-content/themes/boomerang-instawp/assets/images/concert.jpg");
 }
+.home #hero .start-here {
+  display: none;
+}
 .home .feedback, .home .blurb {
   display: flex;
   flex-direction: column;
@@ -342,6 +385,12 @@ Homepage
   font-size: 20px;
   line-height: 150%;
   text-wrap: balance;
+}
+.home .feedback p a, .home .blurb p a {
+  font-weight: bold;
+}
+.home .feedback p a:hover, .home .blurb p a:hover {
+  opacity: 0.7;
 }
 .home .shows {
   margin: 60px auto;
@@ -377,6 +426,11 @@ Homepage
   .home #hero {
     height: 1000px;
   }
+  .home #hero .start-here {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
   .home #hero .hero-inner {
     text-align: left;
   }
@@ -397,6 +451,11 @@ Homepage
 @media only screen and (min-width: large) {
   .home #hero {
     height: 1000px;
+  }
+  .home #hero .start-here {
+    display: block;
+    position: absolute;
+    right: 0;
   }
   .home #hero .hero-inner {
     text-align: left;
@@ -452,6 +511,70 @@ Boomerang Single Page
 }
 .single-boomerang .boomerang .entry-content {
   line-height: 150%;
+}
+
+/**
+Ignitiondeck Product Page
+ */
+.single-ignition_product #hero {
+  background-image: url("/wp-content/themes/boomerang-instawp/assets/images/seats.jpg");
+  background-position: top;
+  height: 500px;
+}
+.single-ignition_product .id-complete-projcont {
+  display: none;
+}
+.single-ignition_product .entry-content {
+  padding: 40px;
+}
+.single-ignition_product .entry-content .id-complete-deck {
+  float: none;
+  margin: 0 auto;
+}
+
+/**
+Author Page
+ */
+.author #hero {
+  background-image: url("/wp-content/themes/boomerang-instawp/assets/images/seats.jpg");
+  background-position: top;
+  height: 500px;
+}
+.author #hero .hero-inner {
+  text-align: center;
+}
+.author #hero .hero-inner h2 {
+  line-height: 150%;
+}
+
+/**
+Ignitiondeck Dashboard Page
+ */
+.memberdeck {
+  margin: 60px auto;
+  max-width: 90%;
+  width: 1200px;
+}
+
+/**
+Boomerang Single Page
+ */
+.single-boomerang #hero {
+  background-image: url("/wp-content/themes/boomerang-instawp/assets/images/seats.jpg");
+  height: 500px;
+  background-position: top;
+}
+.single-boomerang .boomerang .entry-content {
+  line-height: 150%;
+}
+.single-boomerang .boomerang #respond #submit {
+  border-radius: 5px;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+}
+.single-boomerang .boomerang .comment-content p {
+  line-height: 150% !important;
 }
 
 /*# sourceMappingURL=main.css.map */

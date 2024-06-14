@@ -9,13 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
+
 <div class="hero-inner">
 	<?php
 		the_title( '<h2 class="entry-title">', '</h2>' );
 		?>
 </div>
 </div>
-
+<?php do_action( 'biw_single_boomerang_top', get_the_ID() ); ?>
 	<div id="primary" class="content-area boomerang-container">
 		<main id="main" class="site-main" role="main">
 

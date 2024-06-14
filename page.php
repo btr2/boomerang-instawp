@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 	<div class="hero-inner">
-		<h1>Feedback Board</h1>
+		<?php the_title( '<h2>', '</h2>' ); ?>
 	</div>
 </div>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php do_action( 'biw_page_top', get_the_ID() ); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <div class="entry-content" itemprop="mainContentOfPage">
 <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) ); } ?>
